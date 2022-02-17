@@ -1,0 +1,8 @@
+<%= simple_form_for [ @list, @bookmark ] do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :movie, collection: @movies_array %>
+  <%= f.submit "Submit bookmark" %>
+<% end %>
+
+<%= link_to "Go back to #{@list.name} list", list_path(@list.id) %> ||
+<%= link_to "Go back to index", list_path(@list.id) %>
